@@ -25,6 +25,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Print workflow variable value
-      run: echo "Hello, $WORKFLOW_VAR $BUILD. using Java $JAVA_VERSION. My token is {{secrets.CI_TOKEN}}"
+      run: echo "Hello, $WORKFLOW_VAR $BUILD. using Java $JAVA_VERSION. My token is ${{secrets.CI_TOKEN}}"
       env:
         BUILD: 'Currently running a build job'
